@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+html, body{
+  background: url('https://lh3.googleusercontent.com/QzmoI4DbybydhzZb_bruxfbnT8mo5FgdvatQd8a5CEDAkmN0iXYdHjvHmCJNjwyVYyXz2a8u8P8_Cs_isxENVTaTcly3ZKN797kscCSB0gpFs-iyWdXIMDJBAIO2WupUcZTawO0Ur9k8rsWkOz6arpwQMx-vQPGOjje-TddwG_nsIIpIp3l3Oub9S9v09tBAMSAOd8F-VqGBS0GtIdmvxlDAwK8T2do0pA6DiTX8lS3Vd9QjqKhg8By0ZNulKMCDld-WWu3rfSbWFOSyXGt3HDFzk4OYc4vP2_I7RGibTUlhAr-tud3jTNUZsscdgkzcI2BsLf0oBZTCXOqRBQAffVhisIOpTiAJK-g8ruiHS22VokfzJPO4fw0rmOMVE-PP7Eqk1ya_xMO4xuB6hq_2xqxisYrSY7xUUTudu1ZEPFR6KNPQAy1GdqyXDk4PjqK9kC8DPINgD6TPTVWg8zTQcUp5x5P4sWVwpA_0FJo6ZZ1FAbLHK0u272Im5j2oqZEdNRYdbIkH-h_ofN8H7142rL2r9WJAAfRadJztqtjVwtqdS8FYEjBRUSULDwVL6MWG-kkgh8WCg0iFNBvUJOWztBVaujQFnkyagqoTIH4HRaZM9OuW7YlRq66CEwojxLp0Iw-qz7Cw4owH-0feO2jBkhUt58jSj8g=w1136-h757-no');
+  background-position: center left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 350px;
+  background-color: black;
+}
+
+*{
+  transition: .3s;
+  font-family: 'Josefin Sans';
+}
+
+/* Navigation positioning, style, colors -- Hover effects for buttons */
+#Initial-Signature{
+  position: absolute;
+  height: 60px;
+  width: 100px;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+#Initial-Signature button{
+  border: none;
+  color: white;
+  background: transparent;
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#Initial-Signature:hover{
+  animation: Signature-Wiggle 1s 1 ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#Navbar{
+  position: sticky;
+  top: 0px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  /* max-width: 1346px; */
+  background-color: gray;
+  z-index: 3;
+}
+
+#Navbar-Drop-Down{
+  position: relative;
+  width: 125px;
+  height: 0px;
+  float: right;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.Navbar-Button{
+  border: none;
+  background-color: gray;
+  cursor: pointer;
+  color: rgba(255,255,255,1);
+  font-size: 16px;
+  padding: 0% 20px 0% 20px;
+  height: 50px;
+  width: 100%;
+  transition: .2s;
+}
+
+/* Changing of button backgorund color on hover */
+.Navbar-Button:hover{
+  background-color: rgba(101,130,180,1);
+  transition: .2s;
+}
+
+#Projects-Nav-Link{
+  position: absolute;
+  display: inline-block;
+  right: 125px;
+  width: 125px;
+}
+
+#Projects-Nav-Link button{
+  height: 60px;
+  width: 100%;
+}
+
+#Drop-Down-Button{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  z-index: 4;
+  background: transparent;
+}
+
+/* Makes drop down menu arrow invisible until hovered over */ 
+#Drop-Down-Button span{
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  font-size: 10px;
+  opacity: 0;
+}
+
+.Drop-Down-Content{
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+}
+/* Makes drop down menu links invisible until hovered over */
+.Drop-Down-Content li{
+  height: 0px;
+  transition: .3s;
+  opacity: 0;
+}
+
+/* Display hidden drop down menu on hover of "Contact" button */
+#Navbar-Drop-Down:hover .Drop-Down-Content{
+  display: block;
+  top: 60px;
+}
+
+/* Unveils hidden dropdown arrow when hovering over "Contact" button */
+#Navbar-Drop-Down:hover #Drop-Down-Button span{
+  opacity: 1;
+  transition: .5s;
+}
+
+/* Takes drop down menu social media links from being hidden "opacity:0" to shown on the screen "opacity:1" -- Gives drop down effect as it transitions from 0px height to 50px height*/
+#Navbar-Drop-Down:hover .Drop-Down-Content li{
+  height: 50px;
+  opacity: 1;
+  transition: .8s;
+}
+
+/* Keeps "Contact" button glowing with background color while navigating through drop down menu*/
+#Navbar-Drop-Down:hover, .Navbar-Button .Drop-Down-Button{
+  background-color: rgba(101,130,180,1);
+}
+
+/* Formatting of main body */
+#Entire-Page-Container{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+#Welcome-Page-Container{
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  height: 830px;
+  width: 100%;
+  /* max-width: 1346px; */
+  min-width: 300px;
+  font-family: 'Josefin Sans';
+  color: white;
+  font-size: 30px;
+  background-image: url(https://images.unsplash.com/photo-1482440308425-276ad0f28b19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Customization of text, buttons, images of home page -- Hover effects of home page button */
+#Welcome-Page-Content{
+  position: relative;
+  top: 20%;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding-left: 50px;
+}
+
+#Welcome-Page-Content h1{
+    line-height: 70px;
+}
+
+#Welcome-Page-Content p{
+  position: relative;
+  top: -35px;
+}
+
+#Explore-My-Work-Button{
+  position: relative;
+  top: -40px;
+  width: 200px;
+  height: 40px;
+  color: rgba(255,255,255,.8);
+  font-size: 15px;
+  font-family: 'Josefin Sans';
+  font-weight: 500;
+  border: 0px solid white;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(50,76,115,.6);
+  transition: .3s ;
+}
+
+/* Color change of "Explore" button on hover*/
+#Explore-My-Work-Button:hover{ 
+  background: rgba(50,76,115,1);
+  color: rgba(255,255,255,1);
+  transition: .6s;
+}
+
+
+
+  
+  /* Breaks in welcome page "Hello..." sentence for it to look clean on desktop vs. mobile */
+  #Desktop-br{
+    display: none;
+  }
+  
+  #Cellphone-br{
+    display: block;
+  }
+  
+.text-h-center {
+  text-align: center;
+}

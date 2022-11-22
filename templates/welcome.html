@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JudyFang-PersonalWebsite-Welcome</title>
+  <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+
+  <body >
+    <div id="Top-Of-Page"></div>
+    <!-- Beginning of Fixed Navigation Bar -->
+    <!-- <nav id="Navbar">
+      <div id="Initial-Signature">
+        <a href="/"><button><span
+              style="font-size: 25px;"><strong>J.F.</strong></span><br><span><em>Portfolio</em></span></button></a>
+      </div>
+      <div id="Projects-Nav-Link">
+        <a href="{% url 'home' pk=1%}"><button class="Navbar-Button">Portfolio</button></a>
+      </div>
+      <div id="Navbar-Drop-Down">
+        <button class="Navbar-Button" id="Drop-Down-Button">Contact <span>▼</span></button>
+        <div class="Drop-Down-Content">
+          <li>
+            <a href="https://github.com/judyfang0108" target="_blank">
+              <button class="Navbar-Button">GitHub</button>
+            </a>
+          </li>
+          <li><a href="https://www.facebook.com/profile.php?id=100001926958549" target="_blank"><button
+                class="Navbar-Button">Facebook</button></a></li>
+          <li><a href="mailto:judyfang0108@gmail.com"><button class="Navbar-Button">E-Mail</button></a></li>
+        </div>
+      </div>
+    </nav> -->
+    <!-- End of Fixed Navigation Bar -->
+
+    <div id="Entire-Page-Container">
+      <!-- Beginning of Introduction/Home Page Content -->
+      <div id="Welcome-Page-Container">
+        <div id="Welcome-Page-Content">
+          <h1>Welcome to<br id="Desktop-br"><br id="Cellphone-br">Judy Fang's Portfolio</h1>
+          <p>
+            Computer Science
+          </p>
+          <a href="{% url 'home' pk=1 %}"><button id="Explore-My-Work-Button">Explore my work</button></a>
+          <p>
+            <a href="https://www.facebook.com/profile.php?id=100001926958549">
+              <img src="{% static 'images/facebook.png' %}" width="30"></img></a>
+      
+            <a href="https://github.com/judyfang0108">
+              <img src="{% static 'images/github.png' %}" width="30"></img></a>
+            
+            <a href="mailto:judyfang0108@gmail.com"><img src="{% static 'images/gmail.png' %}" width="30"></img></a>
+            
+          </p>
+             
+        </div>
+      </div>
+    </div>
+      
+    <div class="section text-h-center" style="background-color: gray;">
+      <footer>
+        <p style="color: whitesmoke;">© 2022 JudyFang 方稚榕</p>
+        <!-- A footer for the page. -->
+      </footer>
+    </div>
+      <!-- End of Introduction/Home Page Content -->
+
+
+    </div>
+
+  </body>
+  <!-- partial -->
+  
+
+</body>
+</html>

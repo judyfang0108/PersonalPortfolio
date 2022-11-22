@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>JudyFang-PersonalWebsite</title>
+
+  <!---favicon-->
+  <link rel="shortcut icon" href="{% static 'images/logo.ico' %}" type="image/x-icon">
+
+  <!---custom css link-->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!--- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!---#MAIN-->
+  <div class="box">
+    <ion-icon name="eye" style="font-size: 10px; color: whitesmoke;"></ion-icon>
+    <h6 style="color: white;">Total Viewers: {{ hitcount.total_hits }}</h6>
+  </div>
+
+  <main>
+    <!---#SIDEBAR-->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="{% static 'images/judy.jpg' %}" alt="Judy Fang" width="100">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Judy Fang">Judy Fang </h1>
+
+          <div class="wrapper">
+
+            <div>
+              <p class="aside aside-1">Software Engineer</p>
+            </div>
+            <div>
+              <p class="aside aside-1">Product Manager</p>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:judyfang0108@gmail.com" class="contact-link">
+                <p class="breakword">judyfang0108@gmail.com</p>
+              </a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+886 903 810 372" class="contact-link">+886 903 810 372</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2000-01-08">Jan 08, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Kaohsiung City, Taiwan</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="/" class="social-link">
+              <ion-icon name="home" style="font-size: 30px;"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/profile.php?id=100001926958549" class="social-link">
+              <ion-icon name="logo-facebook" style="font-size: 30px;"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/judyfang0108" class="social-link">
+              <ion-icon name="logo-github" style="font-size: 30px;"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!---#main-content-->
+    <div class="main-content">
+      <!--- #NAVBAR-->
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>CV</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!---#ABOUT-->
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          <h3>I'm Chih-Jung (Judy) Fang from Taiwan,</h3>
+          </p>
+          <span>
+            <h4>
+              Grew up in Kaohsiung; work in Kaohsiung after undergraduate; plan to go to graduate school in U.S. in
+              2023.
+            </h4>
+          </span>
+          <div style="color: rgb(30, 30, 31);">
+            <br>
+          </div>
+
+
+        </section>
+
+
+        <!---service-->
+        <section class="service">
+
+          <!-- <h3 class="h3 service-title">What i'm doing</h3> -->
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/work.png' %}" alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Work</h4>
+
+                <p class="service-item-text">
+                  Currently a <b>Product Manager</b> in Clouder Technology Inc.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/school.png' %}" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">School</h4>
+
+                <p class="service-item-text">
+                  Obtained my B.S. in <b>Computer Science and Information Engineering</b> from National Cheng Kung
+                  University.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/coding.png' %}" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Coding</h4>
+
+                <p class="service-item-text">
+                  I enjoy coding! Coding can sharpen my mind, rewire my brain and <b>just teaches me to solve ANY
+                    problem.</b>
+                </p>
+
+
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/business.png' %}" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Business</h4>
+
+                <p class="service-item-text">
+                  I love business, and I enjoy the joys that technology brings to solving problems for people.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/music.png' %}" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Music</h4>
+
+                <p class="service-item-text">
+                  <b>No music no life.</b> Listening to music and singing is the best way to keep me in a good mood.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="{% static 'images/sports.png' %}" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Sports</h4>
+
+                <p class="service-item-text">
+                  I love sports. <b>Sports is one of the basic joys of life.</b> I especially enjoy playing tennis.
+                  Also, I have joined the tennis club.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+
+        <!---testimonials modal-->
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+
+          </section>
+
+        </div>
+
+
+      </article>
+
+      <!---#RESUME-->
+      <article class="cv" data-page="cv">
+
+        <header>
+          <h2 class="h2 article-title">CV</h2>
+        </header>
+        <div style="display:flex; justify-content: flex-end;">
+          <a href="{% static 'CV.pdf' %}">
+            <h4 class="download" style="color:#C5B358;">Download CV</h4>
+          </a>
+
+        </div>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">National Cheng Kung University</h4>
+
+              <p style="color:#C5B358">09/2018 — 06/2022</p>
+
+              <p class="timeline-text">
+                Bachelor of Science in Computer Science and Information Engineering
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Clouder technology Inc. – Product Manager</h4>
+
+              <p style="color:#C5B358">07/2022 — Present</p>
+
+              <p class="timeline-text">
+                • Collect and analyze data of medical institutions needs for Hospital Medical & Education System
+                development and testing<br>
+                • Develop E-Portfolio system and participate in system optimization and interface design
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">National Cheng Kung University - Research Assistant</h4>
+
+              <p style="color:#C5B358">02/2022 — 06/2022</p>
+
+              <p class="timeline-text">
+                • Developed recommendation system of financial instruments for internal use in banks, took charge of
+                coding
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">National Cheng Kung University - Teaching Assistant for Smart Sensing
+                and Mobile Computing</h4>
+
+              <p style="color:#C5B358">02/2022 — 06/2022</p>
+
+              <p class="timeline-text">
+                • Assisted course leader with administration<br>
+                • Helping teachers create lesson plans and check the students’ work
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">BigGo - Intern Python Engineer</h4>
+
+              <p style="color:#C5B358">02/2022 — 04/2022</p>
+
+              <p class="timeline-text">
+                • Searched worldwide e-commerce commodities data with Python web crawlers<br>
+                • Assisted in establishing commodities data in internal system and publishing data on website for users
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h4">Programming</h5>
+              </div>
+
+              <div class="column1">
+                <img src="{% static 'images/c.png' %}" height="33px">
+
+                <img src="{% static 'images/cpp.png' %}" height="33px">
+                <img src="{% static 'images/csharp.png' %}" height="33px">
+                <img src="{% static 'images/sql.png' %}" height="33px">
+                <img src="{% static 'images/html.png' %}" height="33px">
+                <img src="{% static 'images/css.png' %}" height="33px">
+                <img src="{% static 'images/js.png' %}" height="33px">
+                <img src="{% static 'images/java.png' %}" height="33px">
+                <img src="{% static 'images/python.png' %}" height="33px">
+                <img src="{% static 'images/latex.png' %}" height="33px">
+
+                <div class="box1" style="background-color: #BB8FCE;">
+                  <p class="h5" style="color: white;">Lex & Yacc</p>
+                </div>
+                <img src="{% static 'images/dart.png' %}" height="33px">
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h4">Tools</h5>
+              </div>
+
+              <div class="column2">
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;"><b>Python:</b> Pytorch, Tensorflow, Keras, Flask, Django, OpenCV
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #202022; width: 10px;">
+                </div>
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;"><b>C++:</b> STL, OpenMP, CUDA
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #202022; width: 10px;">
+                  <p class="h5" style="color: white;">
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;"><b>Dart:</b> Flutter
+                  </p>
+                </div>
+
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h4 class="h4">Infrastructure</h4>
+              </div>
+
+              <div class="column2">
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;">Docker, Docker-Compose, Nginx
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #202022; width: 10px;">
+                  <p class="h5" style="color: white;">
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;">GCP, AWS, Heroku
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #202022; width: 10px;">
+                  <p class="h5" style="color: white;">
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;">MySQL, PostgreSQL
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #202022; width: 10px;">
+                  <p class="h5" style="color: white;">
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;">GitLab CI/CD, Git
+                  </p>
+                </div>
+
+
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h4 class="h5">Language</h4>
+              </div>
+
+              <div class="column2">
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;"><b>Mandarin Chinese:</b> Native
+                  </p>
+                </div>
+
+                <div class="box" style="background-color: #202022; width: 10px;">
+                  <p class="h5" style="color: white;">
+                  </p>
+                </div>
+
+
+                <div class="box" style="background-color: #C5B358;">
+                  <p class="h5" style="color: white;"><b>English:</b> Advanced
+                  </p>
+                </div>
+
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!---#PROJECTS-->
+      <article class="projects" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Courses</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Website</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Courses</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Website</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="blog-posts-list">
+            {% for project in project_list %}
+            <li class="project-item active" data-filter-item data-category="{{ project.category }}">
+
+              <div class="blog-content" style="border: 5px lightgrey;">
+
+                <div class="blog-meta">
+                  <p class="project-category">{{ project.category }}</p>
+                </div>
+
+
+                <h3 class="h3 blog-item-title">• <u>{{ project.title }}</u></h3>
+
+
+                <p class="blog-text">
+                  {{ project.body |linebreaksbr}}
+                </p>
+                <p>
+                  <br>
+                </p>
+
+                <div class="social-item" style="display: flex; justify-content: flex-end;">
+                  <div>
+                    <a href="{{ project.link }}" class="social-link">
+                      <ion-icon name="logo-github" style="font-size: 30px;"></ion-icon>
+                    </a>
+                  </div>
+                  <div>
+
+                  </div>
+
+                </div>
+            </li>
+            {% endfor %}
+          </ul>
+
+        </section>
+
+      </article>
+
+
+    </div>
+
+    <!---#main-content-->
+  </main>
+
+  <div class="section text-h-center">
+    <footer>
+      <p style="color: whitesmoke;">© 2022 JudyFang 方稚榕</p>
+      <!-- A footer for the page. -->
+    </footer>
+  </div>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="{% static 'js/script.js' %}"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
